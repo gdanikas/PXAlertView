@@ -161,4 +161,19 @@ void * const kAllBGKey = (void * const) &kAllBGKey;
     [self.otherButton setTitleColor:color forState:UIControlStateNormal];
     [self.otherButton setTitleColor:color forState:UIControlStateHighlighted];
 }
+
+#pragma mark Enable/Disable Buttons
+- (void)enableButtonAtIndex:(NSUInteger)buttonIndex
+{
+    UIButton *button = (UIButton *)[self.buttons objectAtIndex:buttonIndex];
+    if (button && [button isKindOfClass:[UIButton class]])
+        [button setEnabled:YES];
+}
+
+- (void)disableButtonAtIndex:(NSUInteger)buttonIndex
+{
+    UIButton *button = (UIButton *)[self.buttons objectAtIndex:buttonIndex];
+    if (button && [button isKindOfClass:[UIButton class]])
+        [button setEnabled:NO];
+}
 @end

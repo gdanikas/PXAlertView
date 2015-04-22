@@ -33,4 +33,7 @@
 
 - (void)useDefaultIOS7Style;
 
+- (void)enableButtonAtIndex:(NSUInteger)buttonIndex;
+- (void)disableButtonAtIndex:(NSUInteger)buttonIndex;
+
 @end
