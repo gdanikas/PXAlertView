@@ -76,6 +76,14 @@ typedef void(^PXAlertViewCompletionBlock)(BOOL cancelled, NSInteger buttonIndex)
                        contentView:(UIView *)view
                         completion:(PXAlertViewCompletionBlock)completion;
 
++ (instancetype)showAlertWithTitle:(NSString *)title
+                           message:(NSString *)message
+                       cancelTitle:(NSString *)cancelTitle
+                       otherTitles:(NSArray *)otherTitles
+                buttonsShouldStack:(BOOL)shouldStack
+                       contentView:(UIView *)view
+                        completion:(PXAlertViewCompletionBlock)completion;
+
 /**
  * Adds a button to the receiver with the given title.
  * @param title The title of the new button

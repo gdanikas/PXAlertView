@@ -664,6 +664,25 @@ static const CGFloat AlertViewVerticalEdgeMinMargin = 25;
 	return alertView;
 }
 
++ (instancetype)showAlertWithTitle:(NSString *)title
+                           message:(NSString *)message
+                       cancelTitle:(NSString *)cancelTitle
+                       otherTitles:(NSArray *)otherTitles
+                buttonsShouldStack:(BOOL)shouldStack
+                       contentView:(UIView *)view
+                        completion:(PXAlertViewCompletionBlock)completion
+{
+    PXAlertView *alertView = [[self alloc] initWithTitle:title
+                                                 message:message
+                                             cancelTitle:cancelTitle
+                                             otherTitles:otherTitles
+                                      buttonsShouldStack:shouldStack
+                                             contentView:view
+                                              completion:completion];
+    [alertView show];
+    return alertView;
+}
+
 - (NSInteger)addButtonWithTitle:(NSString *)title
 {
 	UIButton *button = [self genericButton];
