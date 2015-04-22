@@ -173,7 +173,9 @@ void * const kAllBGKey = (void * const) &kAllBGKey;
 - (void)disableButtonAtIndex:(NSUInteger)buttonIndex
 {
     UIButton *button = (UIButton *)[self.buttons objectAtIndex:buttonIndex];
-    if (button && [button isKindOfClass:[UIButton class]])
+    if (button && [button isKindOfClass:[UIButton class]]) {
         [button setEnabled:NO];
+        [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    }
 }
 @end
